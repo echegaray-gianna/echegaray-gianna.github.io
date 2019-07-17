@@ -404,7 +404,7 @@ fieldset {
 
 /*buttons */
 
-  .submitbtn, .remove {
+  .submitbtn, .remove, .savebtn {
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 20px;
     background-color: #cace31;
@@ -412,9 +412,16 @@ fieldset {
     border-radius: .4em;
     border-color: #31cace;
     padding: 3% 6%;
-    margin-left: 5%;
+    margin-left: 6%;
 
 
+}
+.savebtn{
+    margin-left: 7%;
+}
+.submitbtn {
+    margin-top: 3%;
+    margin-left: 27%;
 }
 
 /*        PLACE PAge      */

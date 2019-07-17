@@ -23,7 +23,7 @@ function save() {
     localStorage.setItem('textEight', zipCode);
     localStorage.setItem('textNine', eventDate);
     localStorage.setItem('textTen', startTime);
-    localStorage.setItem('texTElev', endTime);
+    localStorage.setItem('textElev', endTime);
     localStorage.setItem('textTwel', description);
 
 }
@@ -40,12 +40,12 @@ function load() {
     var storedZipCode = localStorage.getItem('textEight');
     var storedDate= localStorage.getItem('textNine');
     var storedTime = localStorage.getItem('textTen');
-    var storedEndTime = localStorage.getItem('texTElev');
+    var storedEndTime = localStorage.getItem('textElev');
     var storedDescription = localStorage.getItem('textTwel');
 
 
-    if (storedName && storedCompay && storedEmail && storedPhone && storedEName && storedStreet &&
-        storedCity && storedZipCode && storedDate && storedTime && storedEndTime &&
+    if (storedName || storedCompay || storedEmail || storedPhone || storedEName || storedStreet ||
+        storedCity || storedZipCode || storedDate || storedTime || storedEndTime ||
         storedDescription ) {
 
         document.getElementById('fname').value = storedName;
@@ -67,7 +67,7 @@ function load() {
 function remove() {
     document.getElementById('fname').value = '';
     document.getElementById('cname').value = '';
-   document.getElementById('email').value = '';
+    document.getElementById('email').value = '';
     document.getElementById('phone').value = '';
     document.getElementById('ename').value = '';
     document.getElementById('estreet').value = '';
