@@ -1,0 +1,56 @@
+{
+    "SlcPlaces": [
+        {
+            "name": "Temple Square",
+            "description": "Temple Square's three-block plaza is home to nearly 20 attractions related to the Church of Jesus Christ of Latter-day Saints.Recent travelers recommend taking a free, guided tour of the square. Tours are not scheduled, but knowledgeable docents are available every day between 9 a.m. and 9 p.m. Visitors are also welcome to attend the Sunday morning concerts in the Tabernacle, as well as the Thursday evening choir rehearsals (7:30 p.m.), both put on by the renowned Mormon Tabernacle Choir."
+        },
+
+        {
+            "name": "State Capitol",
+            "description": "At the north end of State Street, on Capitol Hill, which rises to a height of almost 300 ft above the city, is the Utah State Capitol. This Neo-Classical domed building houses the House of Representatives, Senate, and Supreme Court of Utah.Capitol Hill is located northeast of Temple Square at the end of State Street. Many of the city's attractions are located here, including the Marmalade Historic District."
+            
+        },
+
+        {
+            "name": "Tracy Aviary",
+            "description": "On the south side of Liberty Park is the Tracy Aviary, with huge variety of birds from North America and other parts of the world. One of the world's oldest aviaries, it was established in 1938 by a local banker."
+        }
+
+
+    ],
+
+    "ProPlaces": [
+        {
+            "name": "Bridal Veil Falls",
+            "description": "Bridal Veil Falls is a 600-foot-tall waterfall nestled in the southern end of Provo Canyon. Easily reached by car, the mulch-tiered falls are visible from US Route 189. The falls have a rich history due to their association with an aerial tramway that was constructed in 1961. The tram was once lauded as the 'world's steepest tramway,' but an avalanche destroyed the machinery in 1996."
+        },
+
+        {
+            "name": "Provo Canyon",
+            "description": "Tucked in the Wasatch Mountains, Provo Canyon is known for its abundance of rock climbing, hiking, and biking trails. The canyon's main attractions are Bridal Veil Falls, the Sundance Mountain Resort and ski area, the Provo River, and Deer Creek Reservoir, a 2700-acre body of water that is used throughout the year for boating, swimming, fishing, and ice fishing."
+        },
+
+        {
+            "name": "Rock Canyon",
+            "description": "Rock Canyon is a highly popular urban forest that draws thousands of visitors each year. Located less than 10 minutes away from central Provo, the canyon is filled with hiking trails, interesting geographical formations, deep caves, and unique plant and animal life. Rock Canyon is also home to the Squaw Peak Trail, a challenging and enjoyable hike that leads to the 7,876-foot summit of Squaw Peak."
+        }
+      
+    ],
+
+    "PciPlaces" :[
+        {
+            "name": "Deer Valley Resort",
+            "description": "Deer Valley is a ski resort 36 miles (58 kilometers) east of Salt Lake City. Deer Valley served as the site of several events for the 2002 Winter Olympics including freestyle moguls, aerial, and alpine slalom. Opened in 1981, Deer Valley is known for its upscale facilities and amenities. "
+        },
+
+        {
+            "name": "Utah Olympic Park",
+            "description": "Located on Olympic Parkway, Utah Olympic Park is the winter sports park that was built for the 2002 Winter Olympics. It hosted several events during the Olympics, including the bobsledding, luge, skeleton, ski jumping, and Nordic combined events. Olympic athletes still use the park to train."
+        },
+
+        {
+            "name": "Alpine Coaster",
+            "description": "Located at Park City Mountain Resort on Lowell Avenue, Alpine Coaster is the largest coaster of its kind in Utah; it is a gravity-driven coaster built on elevated tracks similar to bobsled tracks. Sometimes reaching speeds of up to 30 mph, the coaster car zips thrill-seekers through more than a mile of bends, hair-pin curves, and loops."
+        }
+    ]
+}

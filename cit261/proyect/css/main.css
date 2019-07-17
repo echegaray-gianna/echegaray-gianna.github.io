@@ -1,0 +1,438 @@
+
+body{
+    margin: 1%;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 17px;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header {
+    background-color: #cace31;
+    padding: 0;
+    display: flex;
+    align-items: center;
+
+}
+
+.logo img {
+    position: relative;
+    float: left;
+    border: 3px solid #7ed8ff;
+    width: 70%;
+    margin: 0 0 15px 30px;
+}
+
+.navigation { 
+    list-style: none;  
+}
+.navigation li { 
+    display: none; 
+}
+.navigation.responsive {
+    margin-left: 12%;
+    background: #ffffff;
+}
+.navigation.responsive li {
+    background-color:#31cace;
+    display: flex;
+    flex-grow: 3;
+    justify-content: center;
+    width: 80%; 	
+    border: 1px solid #cccccc;   
+}
+.navigation.responsive li a { 
+    justify-content: center;	 
+    text-decoration:none;
+    padding: 8%;
+    width: 100%;  
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+}   
+.navigation.responsive li a:hover { 
+    background-color: #cace31 ;
+    color: #ffffff ;
+}
+nav button {
+    background-color: #31cace;
+    border: none; 
+}
+.hamburger{
+    color: #000000;
+    font-size: 25px;
+    margin-left: 22%;
+    width: 50px;
+    border: 2px solid #cccccc; 
+}
+nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;  /*remove list*/
+    margin: 0 1px;
+}
+nav ul li a {
+    text-decoration: none;  /*saca la liena de abajo*/
+    color:#d9d9d9; /* makes the words white*/
+}
+  
+picture img {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+h1 {
+    font-family: 'Amatic SC', cursive;
+    font-weight: 700;
+    font-size: 2.3em;
+    margin-left: 1%;
+}
+
+h2 {
+    font-family: 'Amatic SC', cursive;
+    font-weight: 700;
+    font-size: 1.8em;
+    margin-left: 2%;
+    margin-bottom: 1%;
+}
+
+h3 {
+    font-family: 'Amatic SC', cursive;
+    font-weight: 700;
+    font-size: 1.5em;
+    margin-left: 5%; 
+    margin-bottom: 2%;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.intro-text {
+    margin: 3%;
+}
+
+table {
+    border-collapse: collapse;
+    margin-bottom: 3%;
+    width: 100%;
+    
+}
+    
+    
+.hTd {  
+    background-color: #eaeefa;
+    border: 2px solid #ce31ca;
+    width: 150px;
+    height: 30px;
+    padding: .1rem;
+    text-align: center; 
+} 
+.hTh {
+    font-family: 'Amatic SC', cursive;
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+.hTd {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 17px;
+}
+
+
+
+.weatherSection {
+    margin-bottom: 4%;
+}
+
+.homeSection{
+    border: 2px solid #ce31ca;
+    border-radius: .4em;
+    margin-top: 1%;
+    margin-bottom: 4%; 
+    
+}
+
+img {
+    width: 30%;
+    float: left;
+    margin-right: 3%;
+    margin-left: 2%;
+}
+
+.pHome{
+ margin: 0 2% 2% 2%;
+}
+
+footer {
+    margin-top: 8%;
+    background-color: #cace31;
+    width: 100%;    
+    width: 100%;    
+}
+
+footer aside {
+    color: #ffffff;
+    width: 100%;
+    font-size: 20px;
+    padding: 3% 0 2% 0 ;
+    text-align: center;
+    background-color:#cace31;
+    font-family: 'Open Sans Condensed', sans-serif;
+
+    
+}
+footer>p {
+    padding:.3rem;
+    margin-bottom: 0;
+    text-align: center;
+    clear: both;
+    color: #ffffff;
+    font-size: 17px;
+    background-color: #b8bd28;
+    font-family: 'Open Sans Condensed', sans-serif;
+
+} 
+
+
+
+
+/*************** EVENT PAGE ************/
+
+/*table*/
+.eName{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 1.2em;
+    background-color: #eaeefa;
+    border: 2px solid black;
+    border-radius: .4em;
+    border-color: #31cace;
+    font-size: 1.5em;
+    padding: 3%;
+
+
+}
+
+.eTr {
+    background-color: #eaeefa;
+    display: flex;
+    border: 1px solid rgb(165, 165, 165);
+    border-radius: .4em;
+    border-color: #ce31ca;
+    width: 90%;
+    padding: 1%;
+    margin: 2%;
+    margin-left: 4%;
+}
+    
+.eTd {  
+
+    width: 150px;
+    height: 30px;
+    padding: .1rem;
+    text-align: center; 
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    flex: 20%;
+    margin-left: 1%;
+    margin-right: 2%;
+    margin-top: 3%;
+} 
+
+
+.eITd{
+    flex:100%;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 3.5%;
+
+}
+
+
+/*Accordion*/
+
+.container {
+    width: 80%;
+    max-width: 600px;
+    margin: 50px auto;
+  }
+  
+  button.accordion {
+    width: 100%;
+    background-color: #ffffff;
+    border: 2px solid rgb(165, 165, 165);
+    border-radius: .4em;
+    border-color: #ce31ca;
+    font-family: 'Amatic SC', cursive;
+    font-weight: 700;
+    font-size: 1.5em;
+    margin-top:5%;
+    margin-bottom: 3%;
+    outline: none;
+    text-align: left;
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s linear;
+  }
+  
+  button.accordion:after {
+    content: '\f055';
+    font-family: "fontawesome";
+    font-size: 14px;
+    float: right;
+  }
+  
+  button.accordion.is-open:after {
+    content: '\f056';
+  }
+  
+  button.accordion:hover, button.accordion.is-open {
+    background-color: #31cace;
+  }
+  
+  .accordion-content {
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-in-out;
+  }
+
+
+
+
+
+  /******************* EVENT REQUEST PAGE ***********************/
+
+
+
+  /*FORM*/ 
+
+ 
+legend{
+    margin-bottom: 3%;
+    margin-top: 3%;
+    border-radius: .8em;
+    border: #ce31ca 1.5px solid; 
+    padding: 2.5%;
+}
+
+.legendDescr {
+    padding: 2.2%;
+
+}
+
+fieldset {
+    margin: 1%;
+    border-radius: .8em;
+    border: #ce31ca 1.5px solid; 
+    margin-top: 8%;
+    margin-bottom: 7%;
+}
+
+
+.formTitle {
+    font-family: 'Amatic SC', cursive;
+    font-weight: 700;
+    font-size: 28px;
+  }
+
+.tabOne, .tabTwo, .tabThree, .tabFour {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 300;
+    font-size: 26px;
+    margin: 1.5% 0;
+    
+}
+
+.formP {
+    margin-top: 2%;
+    margin-bottom: 2%;
+
+}
+
+.formPT {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 22px;
+}
+
+
+
+.formText, .formTextArea {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 20px;
+    width: 80%;
+    margin-top: 2%;
+    padding: 2%;
+    border-radius: .4em;
+    border: #31cace .5px solid; 
+    margin-bottom: 2%;
+
+}
+
+.formTextArea {
+    width: 95%;
+    
+}
+
+.formTextTwo{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 20px;
+    width: 40%;
+    margin-top: 2%;
+    padding: 2%;
+    border-radius: .4em;
+    border: #31cace .5px solid; 
+}
+
+
+.ref {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 16px;
+}
+
+
+
+
+
+/*buttons */
+
+  .submitbtn, .remove {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 20px;
+    background-color: #cace31;
+    border: 1.5px solid rgb(165, 165, 165);
+    border-radius: .4em;
+    border-color: #31cace;
+    padding: 3% 6%;
+    margin-left: 5%;
+
+
+}
+
+/*        PLACE PAge      */
+
+.places-slc, .places-pro, .places-pci {
+    border: 1.5px solid rgb(165, 165, 165);
+    border-radius: .4em;
+    border-color: #ce31ca;
+    padding: 3% 6%;
+    margin: 3%;
+}
+
+.placeName {
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: #cace31;
+    font-size: 24px;
+}
+
+.placeText {
+    line-height: 1.5;
+}

@@ -1,0 +1,178 @@
+{
+    "SlcEvent": [
+        {
+            "name": "2019 Monday Night Movies",
+            "date": "July 1, 2019",
+            "place": "239 South Main Street, Salt Lake City, UT 84111",
+            "hour": "8:30 PM - 11:30 PM"
+        },
+
+        {
+            "name": "Food trucks and free concert on Conference Center Plaza",
+            "date": "July 1, 2019",
+            "place": "60 West North Temple, Salt Lake City, UT 84150",
+            "hour": "6:00 PM - 8:30 PM"
+        },
+
+        {
+            "name": "Celebration at The Gateway",
+            "date": "July 4, 2019",
+            "place": "18 North Rio Grande Street, Salt Lake City, UT 84101",
+            "hour": "4:00 PM - 10:00 PM"
+        },
+
+        {
+            "name": "Ralph Breaks the Internet",
+            "date": "July 10, 2019",
+            "place": "18 North Rio Grande Street, Salt Lake City, UT 84101",
+            "hour": "5:00 PM - 8:00 PM"
+        },
+
+        {
+            "name": "2019 Family Fun Day",
+            "date": "July 11, 2019",
+            "place": "239 South Main Street, Salt Lake City, UT 84111",
+            "hour": "8:30 PM - 11:30 PM"
+        },
+
+        {
+            "name": "Yoga at the UMFA",
+            "date": "July 27, 2019",
+            "place": "410 Campus Center Drive, Salt Lake City, UT 841121",
+            "hour": "1:00 PM - 11:59 PM"
+        },
+        {
+            "name": "Despicable Me",
+            "date": "July 31, 2019",
+            "place": "18 North Rio Grande Street, Salt Lake City, UT 84101",
+            "hour": "8:45 PM - 11:15 PM"
+        },
+
+        {
+            "name": "Downtown SLC Tuesday Farmers Markets",
+            "date": "August 6, 20199",
+            "place": "350 South 300 West, Salt Lake City, UT 84101",
+            "hour": "4:00 PM - 8:00 PM"
+        },
+
+        {
+            "name": "The Incredibles 2",
+            "date": "August 7, 2019",
+            "place": "18 North Rio Grande Street, Salt Lake City, UT 84101",
+            "hour": "8:45 PM - 11:15 PM"
+        }
+
+    ],
+
+    "ProEvent": [
+        {
+            "name": "Balloon Fest",
+            "date": "July 4, 2019",
+            "place": "1100 N Freedom Blvd, Provo, UT 84604",
+            "hour": "6:00 AM - 8:00 AM"
+        },
+
+        {
+            "name": "Festival at Provo - Freedom Days",
+            "date": "July 4, 2019",
+            "place": "W Center Street, Provo, UT 84601",
+            "hour": "10:00 AM - 6:00 PM"
+        },
+
+        {
+            "name": "Grand Parade",
+            "date": "July 4, 2019",
+            "place": "960 N. University Ave, Provo, UT 84601",
+            "hour": "9:00 AM - 11:59 PM"
+        },
+
+        {
+            "name": "2019 Stadium of Fire with Keith UrbanA",
+            "date": "July 4, 2019",
+            "place": "1700 N Canyon Rd, Provo, UT",
+            "hour": "6:00 PM"
+        },
+        {
+            "name": "Pioneer Day Extravaganza",
+            "date": "July 24, 2019",
+            "place": "North Park",
+            "hour": "10:00 AM to 2:00 PM"
+        },
+
+        {
+            "name": "Temple to Temple 5K Walk/Runs",
+            "date": "July 24, 20199",
+            "place": "2200 Temple Hill Dr ",
+            "hour": "8:00 AM"
+        },
+
+        {
+            "name": "Movie in the Ballroom: Mary Poppins",
+            "date": "August 10, 2019",
+            "place": "Ballroom Provo City Library",
+            "hour": "6:30 PM"
+        }
+    ],
+
+    "PciEvent" :[
+        {
+            "name": "International Summer Film Series: Fox and Child",
+            "date": "July 2, 2019",
+            "place": "Park City Library - 1255 Park Ave",
+            "hour": "6:30 PM - 8:07 PM"
+        },
+
+        {
+            "name": "July 3rd Celebration & Fireworks",
+            "date": "July 3, 2019",
+            "place": "Canyons Village - 4000 Canyons Resort Drive ",
+            "hour": "5:00 PM to 10:00 PM"
+        },
+
+        {
+            "name": "4th of July Parade and Celebratione",
+            "date": "July 4, 2019",
+            "place": "Historic Main Street & City Park - 1354 Park Avenue",
+            "hour": "9:00 AM - 11:59 PM"
+        },
+
+        {
+            "name": "Summit Yoga Series",
+            "date": "July 14, 2019 - August 16, 2019",
+            "place": "Montage Deer Valley - 9100 Marsac Ave",
+            "hour": "9:00 AM t- 10:00 AM"
+        },
+        {
+            "name": "Pioneer Day Extravaganza",
+            "date": "July 24, 2019",
+            "place": "North Park",
+            "hour": "10:00 AM to 2:00 PM"
+        },
+
+        {
+            "name": "NAC - Autism Family Rafting",
+            "date": "July 6, 20199",
+            "place": "1000 Ability Way, Park City ",
+            "hour": "9:30 AM to 5:30 PM"
+        },
+
+        {
+            "name": "Park City Mountain Farmers Market",
+            "date": "June 12, 2019 - October 16, 2019",
+            "place": "Park City Mountain Resort - 1315 Lowell Ave",
+            "hour": "12:00 PM to 5:00 PM"
+        },
+        {
+            "name": "Jupiter Peak Steeplechase",
+            "date": "June 12 - October 16, 2019",
+            "place": "1345 Lowell Ave, Park City",
+            "hour": "8:00 AM to 2:00 PM"
+        }, 
+        {
+            "name": "Kimball Arts Festival",
+            "date": "August 2, 2019 - August 4, 2019",
+            "place": "Historic Main Street - Main Street, Park City",
+            "hour": "Fri, 5-9PM; Sat, 10AM-8PM; Sun, 10AM-6PM"
+        }
+    ]
+}

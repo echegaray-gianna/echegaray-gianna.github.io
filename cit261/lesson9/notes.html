@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> NOTES 9</title>
+</head>  
+<h1>Drawing on Canvas</h1>
+
+<h2> SVG </h2>
+<p>This is an HTML document with a simple SVG picture in it:
+
+    p>Normal HTML here./p> <br>
+    svg xmlns="http://www.w3.org/2000/svg"> <br>
+     circle r="50" cx="50" cy="50" fill="red"/> <br>
+      rect x="120" y="5" width="90" height="90"<br>
+            stroke="blue" fill="none"/><br>
+    /svg><br>
+</p>
+
+<p>The xmlns attribute changes an element (and its children) to a different XML namespace <br>
+    The circle> and rect> tags, which do not exist in HTML, do have a meaning in SVG—they draw shapes using the style and position specified by their attributes.
+
+</p>
+
+<h3>The canvas element</h3>
+<p>Canvas graphics can be drawn onto a <canvas> element</p>
+    <p>The <canvas> tag is intended to allow different styles of drawing. To get access to an actual drawing interface, we first need to create a context, an object whose methods provide the drawing interface.
+
+    </p>
+<h3>Lines and surfaces</h3>
+<p>In the canvas interface, a shape can be filled, meaning its area is given a certain color or pattern, or it can be stroked, which means a line is drawn along its edge</p>
+<p>The fillRect method fills a rectangle.<br>
+    A similar method, strokeRect, draws the outline of a rectangle.<br>
+    The fillStyle property controls the way shapes are filled<br>
+    The strokeStyle property works similarly but determines the color used for a stroked line. The width of that line is determined by the lineWidth property, which may contain any positive number.</p>
+   
+    <h3>Paths</h3>
+    <p>A path is a sequence of lines.</p>
+    <p>When filling a path (using the fill method), each shape is filled separately. A path can contain multiple shapes—each moveTo motion starts a new one. But the path needs to be closed (meaning its start and end are in the same position) before it can be filled. If the path is not already closed, a line is added from its end to its start, and the shape enclosed by the completed path is filled.</p>
+
+<h3>Curves</h3>
+<p>The quadraticCurveTo method draws a curve to a given point. </p>
+<p>The bezierCurveTo method draws a similar kind of curve. Instead of a single control point, this one has two—one for each of the line’s endpoints</p>
+<p>The arc method is a way to draw a line that curves along the edge of a circle. It takes a pair of coordinates for the arc’s center, a radius, and then a start angle and end angle.</p>
+
+<h3>Drawing a pie chart</h3>
+<p>To draw a pie chart, we draw a number of pie slices, each made up of an arc and a pair of lines to the center of that arc. We can compute the angle taken up by each arc by dividing a full circle (2π) by the total number of responses and then multiplying that number (the angle per response) by the number of people who picked a given choice.</p>
+
+<h3> Text</h3>
+<p>A 2D canvas drawing context provides the methods fillText and strokeText</p>
+<p>The last two arguments to fillText and strokeText provide the position at which the font is drawn. By default, they indicate the position of the start of the text’s alphabetic baseline, which is the line that letters “stand” on, not counting hanging parts in letters such as j or p. You can change the horizontal position by setting the textAlign property to "end" or "center" and the vertical position by setting textBaseline to "top", "middle", or "bottom".</p>
+
+<h3>images</h3>
+<p>In computer graphics, a distinction is often made between vector graphics and bitmap graphics</p>
+
+<p>The drawImage method allows us to draw pixel data onto a canvas. This pixel data can originate from an <img> element or from another canvas. </p>
+
+
+<h3>Transformation</h3>
+<p>Calling the scale method will cause anything drawn after it to be scaled. This method takes two parameters, one to set a horizontal scale and one to set a vertical scale.</p>
+
+<h3>Choosing a graphics interface</h3>
+
+<p>So when you need to generate graphics in the browser, you can choose between plain HTML, SVG, and canvas</p>
+<p>Plain HTML has the advantage of being simple. It also integrates well with text. Both SVG and canvas allow you to draw text, but they won’t help you position that text or wrap it when it takes up more than one line. In an HTML-based picture, it is much easier to include blocks of text.</p>
+<p>SVG can be used to produce crisp graphics that look good at any zoom level. Unlike HTML, it is designed for drawing and is thus more suitable for that purpose.</p>
+<p>Both SVG and HTML build up a data structure (the DOM) that represents your picture. This makes it possible to modify elements after they are drawn</p>
+
+
+
+
+
+<body>
+    <main>
+     
+     
+    </main>
+    <script src=></script> 
+</body>
+
+</html>
