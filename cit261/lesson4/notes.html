@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Notes 4     </title>
+</head>  
+
+<body>
+    <main>
+       <h1>Abstraction</h1>
+       <p>Abstractions hide details and give us the ability to talk about problems at a higher (or more abstract) level.</p>
+
+       <h1>Abstracting repetition</h1>
+       <p> You can write a for loop for that, like this:
+
+        1
+        for (let i = 0; i < 10; i++) {
+        2
+          console.log(i);
+        3
+        }
+    OR
+
+    function repeat(n, action) {
+        for (let i = 0; i < n; i++) {
+          action(i);
+        }
+      }
+      
+      repeat(3, console.log);
+      // → 0
+      // → 1
+      // → 2
+        </p>
+
+       <h1>Higher-order functions</h1>
+        <p>
+            Functions that operate on other functions, either by taking them as arguments
+             or by returning them, are called higher-order functions. 
+             Higher-order functions allow us to abstract over actions
+        </p>
+
+        <h1>Filtering arrays</h1>
+
+        <p>To find the scripts in the data set that are still in use, the following function might be helpful. It filters out the elements in an array that don’t pass a test.
+
+          function filter(array, test) {
+            let passed = [];
+            for (let element of array) {
+              if (test(element)) {
+                passed.push(element);
+              }
+            }
+            return passed;
+          }
+          
+          console.log(filter(SCRIPTS, script => script.living));
+          // → [{name: "Adlam", …}, …]</p>
+
+
+          <h1>Transforming with map</h1>
+          <p>The map method transforms an array by applying a function to all of its elements and building a new array from the returned values. The new array will have the same length as the input array, but its content will have been mapped to a new form by the function.</p>
+
+          <h1>Summarizing with reduce</h1>
+          <p>Another common thing to do with arrays is to compute a single value from them.
+              The higher-order operation that represents this pattern is called reduce (sometimes also called fold). It builds a value by repeatedly taking a single element from the array and combining it with the current value. When summing numbers, you’d start with the number zero and, for each element, add that to the sum.
+             </p>
+             <p>The standard array method reduce, which of course corresponds to this function, has an added convenience. If your array contains at least one element, you are allowed to leave off the start argument. The method will take the first element of the array as its start value and start reducing at the second element
+             </p>
+
+
+             <h1>Recognizing text</h1>
+
+             <p>We have a characterScript function and a way to correctly loop over characters. The next step is to count the characters that belong to each script. The following counting abstraction will be useful there:
+
+                function countBy(items, groupName) {
+                  let counts = [];
+                  for (let item of items) {
+                    let name = groupName(item);
+                    let known = counts.findIndex(c => c.name == name);
+                    if (known == -1) {
+                      counts.push({name, count: 1});
+                    } else {
+                      counts[known].count++;
+                    }
+                  }
+                  return counts;
+                }
+                
+                console.log(countBy([1, 2, 3, 4, 5], n => n > 2));
+                // → [{name: false, count: 2}, {name: true, count: 3}]
+                The countBy function expects a collection (anything that we can loop over with for/of) and a function that computes a group name for a given element. It returns an array of objects, each of which names a group and tells you the number of elements that were found in that group.
+                
+                It uses another array method—findIndex. This method is somewhat like indexOf, but instead of looking for a specific value, it finds the first value for which the given function returns true. Like indexOf, it returns -1 when no such element is found.
+                
+                Using countBy, we can write the function that tells us which scripts are used in a piece of text.</p>
+
+
+                <h1> Modules</h1>
+
+                <p>A module is a piece of program that specifies which other pieces it relies on and which functionality it provides for other modules to use (its interface).</p>
+                <p>The relations between modules are called dependencies. When a module needs a piece from another module, it is said to depend on that module. When this fact is clearly specified in the module itself, it can be used to figure out which other modules need to be present to be able to use a given module and to automatically load dependencies.
+
+                    To separate modules in that way, each needs its own private scope.
+                </p>
+
+                <h1>Packages</h1>
+                <p>A package is a chunk of code that can be distributed (copied and installed). It may contain one or more modules and has information about which other packages it depends on. A package also usually comes with documentation explaining what it does so that people who didn’t write it might still be able to use it.
+                    When a problem is found in a package or a new feature is added, the package is updated. Now the programs that depend on it (which may also be packages) can upgrade to the new version.
+
+                    Working in this way requires infrastructure. We need a place to store and find packages and a convenient way to install and upgrade them. In the JavaScript world, this infrastructure is provided by NPM (https://npmjs.org).
+                    NPM is two things: an online service where one can download (and upload) packages and a program (bundled with Node.js) that helps you install and manage them.
+                  </p>
+
+                  <h1>Evaluating data as code</h1>
+
+                  <p>There are several ways to take data (a string of code) and run it as part of the current program.
+
+                      The most obvious way is the special operator eval, which will execute a string in the current scope. This is usually a bad idea because it breaks some of the properties that scopes normally have, such as it being easily predictable which binding a given name refers to.</p>
+                  
+                  <h1>CommonJS</h1>
+                  <p>The most widely used approach to bolted-on JavaScript modules is called CommonJS modules. Node.js uses it and is the system used by most packages on NPM.
+
+                      The main concept in CommonJS modules is a function called require. When you call this with the module name of a dependency, it makes sure the module is loaded and returns its interface.
+                      
+                      Because the loader wraps the module code in a function, modules automatically get their own local scope. All they have to do is call require to access their dependencies and put their interface in the object bound to exports.</p>
+
+                 <p>To avoid loading the same module multiple times, require keeps a store (cache) of already loaded modules. When called, it first checks if the requested module has been loaded and, if not, loads it. This involves reading the module’s code, wrapping it in a function, and calling it.</p>
+                 
+                 <p>A quirk of the CommonJS modules is that, though the module system will create an empty interface object for you (bound to exports), you can replace that with any value by overwriting module.exports. This is done by many modules to export a single value instead of an interface object.
+
+                    By defining require, exports, and module as parameters for the generated wrapper function (and passing the appropriate values when calling it), the loader makes sure that these bindings are available in the module’s scope.</p>
+                 
+                    <p>The way the string given to require is translated to an actual filename or web address differs in different systems. When it starts with "./" or "../", it is generally interpreted as relative to the current module’s filename.</p>
+
+
+
+
+
+
+
+
+
+
+    </main>
+    <script>
+    let arrays = [[1, 2, 3], [4, 5], [6]];
+
+    
+    </script> 
+</body>
+
+</html>

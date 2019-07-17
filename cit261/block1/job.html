@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="css/main.css" rel="stylesheet">
+
+    <title> Block 1 Challenge</title>
+</head>
+
+<body>
+        <header>
+                <a href="jobmain.html">
+                    <figure class="logo">
+                        <img src="img/photo.jpg" alt="logo">
+                    </figure>
+    
+                    <h1 class="headertitle"> JOB POSTING</H1>
+                </a>
+            </header>
+    <main>
+        <form class="all" action="jobsub.html" method="GET">
+            <section class="complete">
+
+                <h2> Please enter the following information: </h2>
+            </section>
+
+            <section class="info">
+                <label class="inputs">
+                    <h3>Job title: </h3>
+                    <span class="input-info"><input type="text" id="inputBox1"> </span>
+                </label>
+
+
+                <label class="inputs">
+                    <h3>Company:</h3>
+                    <span class="input-info"><input type="text" id="inputBox2"> </span>
+                </label>
+
+
+                <label class="inputs">
+                    <h3>Years of Expierience Required:</h3>
+                    <span class="input-info">
+                        <select id="inputBox3">
+                            <option selected disabled>Select Years</option>
+                            <option value="1+">1+</option>
+                            <option value="2+">2+</option>
+                            <option value="3+">3+</option>
+                            <option value="4+">4+</option>
+                            <option value="5+">5+</option>
+                            <option value="6+">6+</option>
+                            <option value="7+">7+</option>
+                            <option value="8+">8+</option>
+                        </select>
+                    </span>
+                </label>
+
+
+                <label class="inputs">
+                    <h3>Skills Required: </h3>
+                    <span class="input-info">
+                        <textarea id="inputBox4" name="ta" rows="4" placeholder="Enter skills here..."></textarea>
+
+                </label>
+
+
+                <label class="inputs">
+                    <h3>Job Description: </h3>
+                    <span class="input-info">
+                        <textarea id="inputBox5" name="ta2" rows="4" placeholder="Enter description here..."></textarea>
+                </label>
+
+            </section>
+
+            <button type="button" onclick="output()"> Post </button>
+
+        </form>
+
+        <section class="get-info">
+
+            <table class="board" id="table-one">
+                <thead>
+                    <th colspan="2" class="job-title" id="top"> </th>
+
+                </thead>
+                <tbody>
+                    <tr class="row">
+                        <td>Company </td>
+                        <td id="one"></td>
+                    </tr>
+                    <tr class="row">
+                        <td>Years of Experience</td>
+                        <td id="two"></td>
+                    </tr>
+                    <tr class="row">
+                        <td>Skills Required</td>
+                        <td id="three"></td>
+                    </tr>
+                    <tr class="row">
+                        <td>Job Description</td>
+                        <td id="four"></td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+
+    </main>
+    <script src="js/job.js"></script>
+</body>
+
+</html>

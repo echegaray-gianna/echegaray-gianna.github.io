@@ -1,0 +1,119 @@
+<!DOCTYPE html><script>
+/* let user = {    // user is the object
+  name: "John",
+  age: 30
+
+};
+
+user.sayHi = function() { //sayHi is the method
+  alert("Hello!");
+};
+
+user.sayHi(); // Hello!
+
+
+ a pre-declared function as a method, like this:
+let user = {
+  // ...
+};
+
+// first, declare
+function sayHi() {
+  alert("Hello!");
+};
+
+// then add as a method
+user.sayHi = sayHi;
+
+user.sayHi(); // Hello! */
+
+
+/* these objects do the same
+
+let user = {
+  sayHi: function() {
+    alert("Hello");
+  }
+};
+
+// method shorthand looks better, right?
+let user = {
+  sayHi() { // same as "sayHi: function()"
+    alert("Hello");
+  }
+};  
+
+
+To access the object, a method can use the this keyword.
+let user = {
+  name: "John",
+  age: 30,
+
+  sayHi() {
+    alert(this.name);
+  }
+
+};
+
+user.sayHi(); // John
+
+
+Summary
+Functions that are stored in object properties are called “methods”.
+Methods allow objects to “act” like object.doSomething().
+Methods can reference the object as this.
+The value of this is defined at run-time.
+
+When a function is declared, it may use this, but that this has no value until the function is called.
+That function can be copied between objects.
+When a function is called in the “method” syntax: object.method(), the value of this during the call is object.
+*/
+
+
+
+/*let user = {
+  name: "John",
+  go: function() { alert(this.name) }
+}; 
+
+(user.go)()  */
+
+
+let calculator = {
+  sum() {
+    return this.a + this.b;
+  },
+
+  mul() {
+    return this.a * this.b;
+  },
+
+  read() {
+    this.a = +prompt('a?', 0);
+    this.b = +prompt('b?', 0);
+  }
+};
+
+calculator.read();
+alert( calculator.sum() );
+alert( calculator.mul() );
+
+let ladder = {
+  step: 0,
+  up() {
+    this.step++;
+    return this;
+  },
+  down() {
+    this.step--;
+    return this;
+  },
+  showStep() {
+    alert( this.step );
+    return this;
+  }
+}
+
+ladder.up().up().down().up().down().showStep(); // 1
+
+</script>

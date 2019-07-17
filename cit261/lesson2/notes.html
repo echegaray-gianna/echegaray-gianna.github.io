@@ -1,0 +1,41 @@
+
+     const square = function(x) { // a funtion start with "funtion" expresion"  Functions have a set of parameters (in this case, only x) and a body
+     return x * x;
+     };
+
+     console.log(square(12));
+    // → 144
+
+    const makeNoise = function() {
+    console.log("Pling!");
+     };
+
+    makeNoise();
+    // → Pling!
+
+    const power = function(base, exponent) {
+     let result = 1;
+    for (let count = 0; count < exponent; count++) {
+    result *= base;
+     }
+     return result;
+     };
+
+    console.log(power(2, 10));
+    // → 1024
+
+DECLARATION NOTATION --- 
+                There is a slightly shorter way to create a function binding. When the function keyword is used at the start of a statement, it works differently.
+                function square(x) {
+                    return x * x;
+                  }
+ARROW FUNTIONS ---
+                There’s a third notation for functions, which looks very different from the others. Instead of the function keyword, it uses an arrow (=>) made up of an equal sign and a greater-than character 
+                const power = (base, exponent) => {
+                    let result = 1;
+                    for (let count = 0; count < exponent; count++) {
+                      result *= base;
+                    }
+                    return result;
+                  };
+

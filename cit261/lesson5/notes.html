@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> NOTES 5 </title>
+</head>  
+ <h1>Bugs</h1>
+ <h2> Strict Mode</h2>
+ <p>Putting the string "use strict" at the top of a file or a function body. 
+    function canYouSpotTheProblem() {
+        "use strict";
+        for (counter = 0; counter < 10; counter++) {
+          console.log("Happy happy");
+        }
+      }
+      
+      canYouSpotTheProblem();
+      // → ReferenceError: counter is not defined
+ </p>
+
+ <h2>Debugging</h2>
+ <p>Once you notice there is something wrong with your program because it misbehaves or produces errors, the next step is to figure out what the problem is.</p>
+<p>Sometimes the line that triggered the problem is simply the first place where a flaky value produced elsewhere gets used in an invalid way. </p>
+<p>Putting a few strategic console.log calls into the program is a good way to get additional information about what the program is doing.</p>
+
+<p>An alternative to using console.log to peek into the program’s behavior is to use the debugger capabilities of your browser. Browsers come with the ability to set a breakpoint on a specific line of your code. When the execution of the program reaches a line with a breakpoint, it is paused, and you can inspect the values of bindings at that point. I won’t go into details, as debuggers differ from browser to browser, but look in your browser’s developer tools or search the Web for more information.
+
+    Another way to set a breakpoint is to include a debugger statement (consisting of simply that keyword) in your program. If the developer tools of your browser are active, the program will pause whenever it reaches such a statement.</p>
+
+ <h2>Exceptions</h2>   
+ <p>When a function cannot proceed normally, what we would like to do is just stop what we are doing and immediately jump to a place that knows how to handle the problem. This is what exception handling does.
+    Exceptions are a mechanism that makes it possible for code that runs into a problem to raise (or throw) an exception. An exception can be any value. 
+ </p>
+
+ <h3>Cleaning up after exceptions</h3>
+ <p>The effect of an exception is another kind of control flow. Every action that might cause an exception, which is pretty much every function call and property access, might cause control to suddenly leave your code.</p>
+<p>The transfer function transfers a sum of money from a given account to another, asking for the name of the other account in the process. If given an invalid account name, getAccount throws an exception.
+
+    But transfer first removes the money from the account and then calls getAccount before it adds it to another account. If it is broken off by an exception at that point, it’ll just make the money disappear.
+    
+    That code could have been written a little more intelligently, for example by calling getAccount before it starts moving money around. But often problems like this occur in more subtle ways. Even functions that don’t look like they will throw an exception might do so in exceptional circumstances or when they contain a programmer mistake.
+    
+    One way to address this is to use fewer side effects. Again, a programming style that computes new values instead of changing existing data helps. If a piece of code stops running in the middle of creating a new value, no one ever sees the half-finished value, and there is no problem.
+    
+    But that isn’t always practical. So there is another feature that try statements have. They may be followed by a finally block either instead of or in addition to a catch block. A finally block says “no matter what happens, run this code after trying to run the code in the try block.”</p>
+
+<h2>Assertions</h2>
+<p>Assertions are checks inside a program that verify that something is the way it is supposed to be. They are used not to handle situations that can come up in normal operation but to find programmer mistakes.</p>
+
+
+
+
+
+
+
+
+<body>
+    <main>
+     
+     
+    </main>
+    <script src=></script> 
+</body>
+
+</html>

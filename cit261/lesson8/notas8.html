@@ -1,0 +1,260 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> NOTES 8</title>
+</head>  
+ <h1>Transforms</h1>
+ <p> We can manipulate an element’s appearance using transform functions</p>
+
+<h2>Translation</h2>
+<p> Translation functions allow you to move elements left, right, up, or down. These
+    functions are similar to the behavior of position: relative; when declaring top
+    and left, moving elements up and down or left and right along the x and y axes.
+    When you employ a translation function, you’re moving elements without impacting
+    the flow of the document. Unlike position: relative, which allows you to position
+    an element either against its current position or against a parent or other ancestor,
+    a translated element can only be moved relative to its current position.</p>
+
+<p>If you only want to move an element vertically or horizontally, you can use the
+    translatex or translatey functions respectively.</p>
+
+<p>Transforms don’t work on inline elements.We’ll just
+    add display: inline-block; </p>
+
+<h2>Scaling</h2>
+<p>The scale(x,y) function scales an element by the defined factors horizontally then
+    vertically. If only one value is provided, it will be used for both the x and y values,growing or shrinking your element or pseudo-element while maintaining the original
+    aspect ratio. For example, scale(1) would leave the element the same size, scale(2)
+    would double its proportions, scale(0.5) would halve them, and so on.</p>
+
+    <p>It’s also worth remembering that scaling, like translation, has no impact on the
+        document flow.</p>
+
+<h2>Rotation</h2>
+
+<p>The rotate() function rotates an element around the point of origin by a specified
+    angle value. As with scale, by default the point of origin is the element’s center. Positive degrees moving clockwise
+    and negative moving counterclockwise.</p>
+
+
+<h2>Skew</h2>
+<p>The skew(x,y) function specifies a skew along the x and y axes</p>
+
+
+<h2>Changing the Origin of the Transform</h2>
+
+<p>You can control the origin from which your transforms are
+    applied. This is done using the transform-origin property.</p>
+
+
+<h1> Transitions </h1>
+
+<p>Here are the steps to create a simple transition using only CSS:
+    1. Declare the original state of the element in the default style declaration.
+    2. Declare the final state of your transitioned element; for example, a :hover state.
+    3. Include the transition functions in your default style declaration using the
+    transition properties, including: transition-property, transition-duration,
+    transition-timing-function, and transition-delay</p>
+
+
+<h2>transition-property</h2>
+
+<p>It is important to include a pre-state and a post-state. For example, to transition
+    from rectangular corners to rounded corners, set the original state to border-radius:
+    0;.
+    The exception to this “if there is a valid midpoint, it can be transitioned” rule is
+    visibility: although there is no valid midpoint between the values visible and
+    hidden, when transitioned, the value changes at the endpoint of the transition.</p>
+
+<p>If you want to transition more than one property, but not all, commaseparate
+    them.</p>
+
+
+ <h3>transition-duration</h3>
+
+ <p>The transition-duration property sets how long the transition will take: the
+    duration of time it takes to go from the default state to the transitioned state. You
+    can specify this either in seconds (s) or milliseconds (ms). 200ms is generally considered the optimum time for a transition</p>
+
+<h3> transition-timing </h3>
+
+<p>The most common timing functions include the key terms ease, linear, ease-in,
+    ease-out, or ease-in-out. The default ease has a slow start, then it speeds up, and
+    ends slowly. ease-in-out is similar to ease, but accelerates more sharply at the
+    beginning. linear creates a transition that animates at a constant speed. ease-in
+    creates a transition that is slow to start but gains speed, then stops abruptly. The
+    opposite, ease-out, starts at full speed, then slows progressively as it reaches the
+    conclusion of the transition.</p>
+
+<h3>Transition-delay </h3>
+<p>Finally, by using the transition-delay property, it’s possible to introduce a delay
+    before the transition begins.</p>
+
+<p>Normally a transition begins immediately, so the default
+    is 0. Include the number of milliseconds (ms) or seconds (s) to delay the transition.</p>
+
+    <h1> Animations </h1>
+
+    <p> CSS animations, unlike transitions, allow you to control each step of an animation via keyframes. A keyframe is a snapshot that defines a starting or end point of any smooth transition.
+       
+    </p>
+
+<h2> Keyframes</h2>
+<p> To animate an element in CSS, you first create a named animation, then attach it
+        to an element in that element’s property declaration block. Animations in themselves
+        don’t do anything; in order to animate an element, you’ll need to associate the animation
+        with that element. </p>
+
+
+<h2>Animation Properties</h2>
+
+<h3>animation-name</h3>
+<p>This property is used to attach an animation (previously defined using the @keyframes syntax) to an element.Note that you should not put quotes around the animation name </p>
+
+<h3>animation-duration</h3>
+<p>The animation-duration property defines the length of time (in seconds or milliseconds)
+        an animation takes to complete one iteration</p>
+
+<h3>animation-timing-function</h3>
+<p>the animation-timing-function
+        determines how the animation will progress over its duration. The options are the
+        same as for transition-timing-function: ease, linear, ease-in, ease-out, easein-
+        out, a developer-defined cubic-bezier() function, step-start, step-end, or
+        a developer-defined number of steps with the steps(number, direction) function</p>
+
+<h3>animation-iteration-count</h3>       
+<p>The animation-iteration-count property lets you define how many times the
+        animation will play through. The value is generally an integer, but you can also use
+        numbers with decimal points or the value infinite for endlessly repeating animations </p> 
+
+
+<h3>animatoin-direction</h3>
+
+<p>When the animation iterates, it normally goes from the 0% to the 100% keyframe,
+        jumping back to the 0% when it starts a new iteration (if the animation-iterationcount
+        is greater than 1). This is the default or normal value for animation-direction.
+        You can use the animation-direction property to change this behavior.</p>
+
+
+<p>The value of reverse will cause the animation to start at the 100% keyframe and
+ work its way to the 0% keyframe for every iteration.With the alternate value, the
+ initial iteration and odd-numbered iterations after that will go in the normal 0% to
+100% direction, but the second iteration and every even iteration after that will go
+in the reverse direction of 100% to 0%. Similarly, the alternate-reverse animation-
+direction value causes the animation to alternate direction at every iteration,
+but it starts in reverse.</p>
+
+
+<h3>animation-delay</h3>
+<p>The animation-delay property is used to define how many milliseconds or seconds
+        to wait before the browser begins the animation</p>
+
+<h3>animation-fill-mode</h3>
+
+<p>The animation-fill-mode property defines what happens before the first animation
+        iteration begins and after the last animation iteration concludes</p>
+
+<p> The available values are none, forwards, backwards, or both. The default is none,
+        in which case the animation proceeds and ends as expected</p>
+
+<p>We can tell the animation to sit and wait on the first keyframe from the moment
+                the animation is applied to the element, through the duration of the animation
+                delay, until the animation starts iterating with animation-fill-mode: backwards.
+                We can also hold the element at the last keyframe, with last keyframe property
+                values overriding the element's original property values, without reverting to the
+                original values at the conclusion of the last animation iteration with animationfill-
+                mode: forwards. We can also achieve both of these with animation-fillmode:
+                both.</p>
+
+
+<h3>animation-play-state</h3>
+
+<p>The animation-play-state property defines whether the animation is running or
+        paused.</p>
+
+
+<h1>Canvas</h1>
+<p>With canvas, we can draw shapes and lines,
+        arcs and text, gradients and patterns. In addition, canvas gives us the power to manipulate
+        pixels in images and even video.</p>
+
+<h2>Creating a canvas Element</h2>
+<p>The first step to using canvas is to add a canvas element to the page.
+    <br>
+  **** The text in between the canvas tags will only be shown if the canvas element is
+  not supported by the visitor’s browser.
+<br>
+Since drawing on the canvas is done using JavaScript, we’ll need a way to grab the
+element from the DOM. We’ll do so by giving our canvas an ID.
+<br>
+'<'canvas id="myCanvas" class="myCanvas"> <br>
+        Sorry! Your browser doesn’t support Canvas. <br>
+        '<'/canvas>
+<br>
+The canvas element takes both a width and height attribute, which must also be
+set.
+<br>
+Let’s add a width and height attribute to the canvas element
+<br>
+"<"canvas id="myCanvas" class="myCanvas" width="200" height="200"> <br>
+        Sorry! Your browser doesn’t support Canvas.<br>
+        "<"/canvas> <br>
+
+Finally, let’s add a border to our canvas using some CSS to visually distinguish it
+on the page. Canvas has no default styling, so it’s difficult to see where it is on the
+page unless you give it some kind of border
+<br>
+.myCanvas {  <br>
+    border: dotted 2px black; <br>
+    }
+</p>
+
+<h2>Drawing on the Canvas</h2>
+
+<p>Before we can draw onto a canvas, we need to
+        grab hold of the canvas element on our page:<br>
+        var canvas = document.getElementById("myCanvas");</p>
+
+<h2>Getting the Context</h2>
+<p>The context is the place where your drawing is rendered. Currently, there’s
+        only wide support for drawing to a two-dimensional context</p>
+
+<p>We obtain our drawing context by calling the getContext method and passing it
+        the string "2d", since we’ll be drawing in two dimensions: <br>
+        var canvas = document.getElementById("myCanvas");<br>
+        var context = canvas.getContext("2d");</p>
+
+ <h2>Filling Our Brush with Color</h2>   
+ <p>you must first saturate your brush with paint before
+        you can begin. We do so with the strokeStyle or fillStyle properties. Both strokeStyle and fillStyle are set on
+        a context object, and both take one of three values: a string representing a color, a
+        CanvasGradient object, or a CanvasPattern object.</p>    
+
+<p>Let’s start by using a color string to style the stroke. You can think of the stroke as the border of the shape you’re going to draw. To draw a rectangle with a red border,
+                we first define the stroke color: <br>
+                var canvas = document.getElementById("myCanvas");<br>
+                var context = canvas.getContext("2d"); <br>
+                context.strokeStyle = "red";</p>
+
+ <p> var canvas = document.getElementById("myCanvas"); **>We obtain our drawing context by calling the getContext method and passing it
+        the string "2d", since we’ll be drawing in two dimensions <br>
+        var context = canvas.getContext("2d"); <br>
+        context.strokeStyle = "red"; ** you must first saturate your brush with paint before  you can begin <br>
+        context.fillStyle = "rgba(0, 0, 255, 0.5)"; <br>
+        context.fillRect(10, 10, 100, 100); <br>
+        context.strokeRect(10, 10, 100, 100); <br>
+     </p>
+
+     
+<body>
+    <main>
+     
+     
+    </main>
+    <script src=></script> 
+</body>
+
+</html>
