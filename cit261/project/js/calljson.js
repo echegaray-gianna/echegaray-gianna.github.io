@@ -2,7 +2,7 @@ let eventSlc = document.querySelector('.event-slc');
 
 fetch('event.json')
     .then(
-        (response) => {    //could be anything not response. Here we store the promise in a variable
+        (response) => {    
             response.json()  //.json is a method to get the date from the promise
                 .then(
                     (eventOne) => {
